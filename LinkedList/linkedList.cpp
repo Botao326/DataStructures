@@ -116,4 +116,39 @@ bool LinkedList::DeleteElem(ElemType elem) {
     return true;
 }
 
+void LinkedList::ReverseList() {
+    if (length == 0 || length == 1)
+        return;
+
+    List ptr = head;
+    List pCursor = ptr->next;
+    List pNext = NULL;
+    while(pCursor != NULL){
+        pNext = pCursor->next;
+        pCursor->next = ptr;
+        ptr = pCursor;
+        pCursor = pNext;
+    }
+    head->next = NULL;
+    head = ptr;
+}
+
+void LinkedList::ReverseWithRecur() {
+    ReverseRecur(head);
+}
+
+void LinkedList::ReverseRecur(List& head) {
+    if (head == NULL)
+        return;
+
+    List ptr = head->next;
+    if (ptr == NULL)
+        return;
+
+    ReverseRecur(ptr);
+    head->next->next = head;
+    head->next = NULL;
+    head = ptr;
+}
+
 

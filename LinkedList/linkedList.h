@@ -20,6 +20,9 @@ private:
 public:
     LinkedList();
     void PrintList();
+    void ReverseList();
+    void ReverseRecur(List& head);
+    void ReverseWithRecur();
     bool CreateList(ElemType elem);
     bool InsertElem(ElemType elem, List pos);
     bool DeleteElem(ElemType elem);
