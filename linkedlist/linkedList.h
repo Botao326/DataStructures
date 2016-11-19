@@ -16,6 +16,7 @@ typedef Node *List;
 class LinkedList{
 private:
     List head;
+    int length;
 public:
     LinkedList();
     void PrintList();
