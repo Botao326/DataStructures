@@ -5,6 +5,8 @@
 #ifndef QUEUE_QUEUE_H
 #define QUEUE_QUEUE_H
 
+#define MAXSIZE 100
+
 typedef int ElemType;
 
 struct Node{
@@ -20,7 +22,7 @@ private:
     QNode Tail;
     int length;
 public:
-    QNode CreateQueue();
+    void CreateQueue();
     bool AddElement(ElemType element);
     ElemType PopQueue();
     bool isEmpty();
