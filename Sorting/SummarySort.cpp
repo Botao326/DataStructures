@@ -15,7 +15,7 @@ using namespace std;
  *  Bubble Sort without improving
  *  Time Complexity O(n^2)
  *  Space Complexity O(1)
- *
+ *  Stable
  */
 vector<int> Solution::BubbleSort(vector<int> nums){
     if (nums.empty()) return nums;
@@ -33,7 +33,7 @@ vector<int> Solution::BubbleSort(vector<int> nums){
  *  Insert Sort without improving
  *  Time Complexity O(n^2)
  *  Space Complexity O(1)
- *
+ *  Stable
  */
 vector<int> Solution::InsertSort(vector<int> nums){
     if (nums.empty()) return nums;
@@ -56,7 +56,7 @@ vector<int> Solution::InsertSort(vector<int> nums){
  *  Shell Sort without improving
  *  Time Complexity O(nlogn)
  *  Space Complexity O(1)
- *
+ *  Stable
  */
 vector<int> Solution::ShellSort(vector<int> nums){
     if (nums.empty()) return nums;
@@ -80,7 +80,7 @@ vector<int> Solution::ShellSort(vector<int> nums){
  *  Selection Sort without improving
  *  Time Complexity O(n^2)
  *  Space Complexity O(1)
- *
+ *  Unstable
  */
 vector<int> Solution::SelectSort(vector<int> nums){
     if (nums.empty()) return nums;
@@ -103,7 +103,7 @@ vector<int> Solution::SelectSort(vector<int> nums){
  *  Merge Sort without improving
  *  Time Complexity O(nlogn)
  *  Space Complexity O(1)
- *
+ *  Stable
  */
 
 void Merge(vector<int> & nums, size_t left, size_t mid, size_t right){
@@ -154,6 +154,7 @@ void Solution::MergeSort(vector<int> & nums){
  *
  *  Time Complexity O(nlogn)
  *  Space Complexity O(1)
+ *  Unstable
  */
 void Heap_Adjust(vector<int> &nums, int start, int end){
     int parent = start;
@@ -189,6 +190,7 @@ void Solution::HeapSort(vector<int> & nums){
  *
  *  Time Complexity O(nlogn)
  *  Space Complexity O(1)
+ *  Unstable
  */
 int partition(vector<int> &nums, int left, int right){
     int pivot_val = nums[left];
